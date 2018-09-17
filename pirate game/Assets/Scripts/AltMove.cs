@@ -7,7 +7,7 @@ public class AltMove : MonoBehaviour {
 float PlaceX;
 float PlaceY;
 bool CanPromptW = false;
-public float MoveSpeed;
+float MoveSpeed;
 public GameObject WaterPrompt;
 public GameObject WaterMap;
 
