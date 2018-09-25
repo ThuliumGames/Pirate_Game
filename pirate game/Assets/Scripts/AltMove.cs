@@ -80,7 +80,7 @@ public GameObject WaterMap;
 	}
 	void OnTriggerExit2D (Collider2D Hit) {
 		if (Hit.gameObject.tag == "Shore") {
-			WaterMap.GetComponent<Collider2D>().isTrigger = false;
+			//WaterMap.GetComponent<Collider2D>().isTrigger = false;
 			CanPromptW = true;
 		}
 	}

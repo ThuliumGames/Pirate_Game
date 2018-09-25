@@ -13,7 +13,7 @@ public class Move : MonoBehaviour {
 	public GameObject CBall;
 	public GameObject LandPrompt;
 	bool CanPromptL = true;
-	Quaternion RotCorrect;
+	public static Quaternion RotCorrect;
 
 	void Start () {
 		time = ShootTime;
