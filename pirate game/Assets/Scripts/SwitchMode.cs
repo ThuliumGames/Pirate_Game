@@ -14,9 +14,10 @@ public class SwitchMode : MonoBehaviour {
 
 	public void LandYes_OnClick() {
 		if(!OnLand) {
+			WaterMap.GetComponent<Collider2D>().isTrigger = false;
 			LandPrompt.SetActive(false);
 			LandPlayer.transform.position = Boat.transform.position;
-			//LandPlayer.transform.rotation = Boat.transform.rotation;
+			LandPlayer.transform.rotation = Boat.transform.rotation;
 			OnLand = true;
 		}
 	}
@@ -26,7 +27,7 @@ public class SwitchMode : MonoBehaviour {
 			WaterMap.GetComponent<Collider2D>().isTrigger = true;
 			WaterPrompt.SetActive(false);
 			Boat.transform.position = LandPlayer.transform.position;
-			Boat.transform.rotation = LandPlayer.transform.rotation;
+			Move.RotCorrect = LandPlayer.transform.rotation;
 			OnLand = false;
 		}
 	}
